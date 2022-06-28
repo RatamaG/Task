@@ -3,7 +3,7 @@
 }
 
 header {
-  background-color: #62a5ee;
+  background-color: #ffffff;
   padding: 10px 20px;
   box-sizing: border-box;
 }
@@ -18,7 +18,7 @@ header {
   h1 {
     font-size: 30px;
     font-weight: 300;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 13px;
     margin-top: 5px;
   }
@@ -31,7 +31,7 @@ header {
   }
 
   a {
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: underline;
   }
 
@@ -46,10 +46,10 @@ header {
 }
 
 .subtitle {
-  color: white;
+  color: rgb(0, 0, 0);
   margin: 0;
   padding: 13px 0;
-  background-color: #2a3543;
+  background-color: #ffffff;
   margin-bottom: 20px;
 
   h3 {

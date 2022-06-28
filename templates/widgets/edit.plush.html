@@ -1,0 +1,39 @@
+<nav class="navbar navbar-expand-lg navbar navbar-light " style="background-color: #e3f2fd;">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+    <div class="col-md-1 col-sm-2 col-xs-2 logo">
+      <a href="<%= rootPath() %>"><img src="<%= rootPath() %>assets/images/logo.svg" alt=""></a>
+    </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Started</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="http://127.0.0.1:3000/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="http://127.0.0.1:3000/widgets/">Tasks</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://publius.com.co/" target="_blank">Publius</a>
+      </li>
+      <li class="col-md-9 col-sm-9 col-xs-10 titles">
+        <a class="nav-link" href="https://github.com/RatamaG" target="_blank"">github.com/RatamaG</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</header>
+
+<div class="py-4 mb-2">
+  <h3 class="d-inline-block">Edit Widget</h3>
+</div>
+
+<%= formFor(widget, {action: widgetPath({ widget_id: widget.ID }), method: "PUT"}) { %>
+  <%= partial("widgets/form.html") %>
+  <%= linkTo(widgetPath({ widget_id: widget.ID }), {class: "btn btn-outline-danger", "data-confirm": "Are you sure?", body: "Cancel"}) %>
+<% } %>
